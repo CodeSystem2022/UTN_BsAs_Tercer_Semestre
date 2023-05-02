@@ -13,3 +13,5 @@ Repositorio para la presentación de ejercicios de las materias LABORATORIO III 
 - Giuliana Ayelen Pagano Alejos
 - Alejandro Algarin 
 - Fernando Barrionuevo
+
+![image](https://user-images.githubusercontent.com/105835509/235663184-45872474-c465-4680-9ffa-35d8a35e6a33.png)
