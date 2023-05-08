@@ -6,12 +6,12 @@
 Repositorio para la presentación de ejercicios de las materias LABORATORIO III 2022 y PROGRAMACION III 2022
  del Tercer Semestre.
 
-- Maximiliano Chalin 
-- Maria Pia olivera 
-- Alicia Viviana Montenegro 
-- Sergio Darío Vega 
+- Maximiliano Chalin                    mchalin
+- Maria Pia olivera                     piaolivera
+- Alicia Viviana Montenegro             vmgith
+- Sergio Darío Vega                     DarioVega
 - Giuliana Ayelen Pagano Alejos
-- Alejandro Algarin 
-- Fernando Barrionuevo
+- Alejandro Algarin                     ale4287
+- Fernando Barrionuevo                  Rasta07
 
 ![image](https://user-images.githubusercontent.com/105835509/235663184-45872474-c465-4680-9ffa-35d8a35e6a33.png)
