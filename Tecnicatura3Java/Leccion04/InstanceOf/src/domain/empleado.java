@@ -8,11 +8,11 @@ package domain;
  *
  * @author Pia Olivera
  */
-public class empleado {
+public class Empleado {
     protected String nombre;
     protected double sueldo;
     
-    public empleado(String nombre,double sueldo){
+    public Empleado(String nombre,double sueldo){
         this.nombre = nombre;
         this.sueldo = sueldo;
     }

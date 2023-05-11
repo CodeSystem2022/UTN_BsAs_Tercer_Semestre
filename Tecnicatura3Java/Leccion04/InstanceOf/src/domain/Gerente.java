@@ -8,7 +8,7 @@ package domain;
  *
  * @author Pia Olivera
  */
-public class Gerente extends empleado{
+public class Gerente extends Empleado{
     private String departamento;
     
     public Gerente (String Nombre, double Sueldo, String departamento){
