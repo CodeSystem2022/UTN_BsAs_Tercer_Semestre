@@ -14,7 +14,6 @@ Repositorio para la presentación de ejercicios de las materias LABORATORIO III 
        vmgith
 - Sergio Darío Vega               
        DarioVega
-- Giuliana Ayelen Pagano Alejos
 - Alejandro Algarin                
        ale4287
 - Fernando Barrionuevo    
