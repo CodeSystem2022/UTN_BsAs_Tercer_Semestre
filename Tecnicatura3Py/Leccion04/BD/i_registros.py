@@ -1,23 +1,32 @@
-import psycopg2  # Librería para conectar con PostgreSQL
+import psycopg2
 
-dns = "dbname=test_bd user=postgres password=admin host=127.0.0.1 port=5432"
-conexion = psycopg2.connect(dns)
+conexion = psycopg2.connect(
+    user='postgres',
+    password='admin',
+    host='127.0.0.1',
+    port='5432',
+    database='test_bd'
+)
 
-# Insertar registro
+
+
+
 try:
     with conexion:
-        with conexion.cursor() as cursor:
-            sentencia = 'INSERT INTO persona (nombre, apellido, email) VALUES (%s, %s, %s)'
-            # Se pide que ingrese los datos a insertar
-            nombre = input('Ingrese el nombre de la persona a insertar: ')
-            apellido = input('Ingrese el apellido de la persona a insertar: ')
-            email = input('Ingrese el email de la persona a insertar: ')
-            cursor.execute(sentencia, (nombre, apellido, email))
-            # conexion.commit() # Se utiliza para guardar los cambios en la Base de Datos, en este caso no es necesario
-                                # por el uso del with
-            registros_insertados = cursor.rowcount
-            print(f'Los registros insertados son: {registros_insertados}')
+         with conexion.cursor() as cursor:
+
+            sentencia = 'insert into persona (nombre,apellido,email) values (%s,%s,%s)'
+            valores =('carlos,'lara',clara@mail.com') # es un tupla
+
+            #clase 5 parte5
+            entrada = input('digite los id persona separados por coma : ')
+            cursor.execute(sentencia,valores)
+            registros_insertador = cursor.rowcount
+            print(f'los registros insertados son : {registros_insertados}')
+
+
 except Exception as e:
-    print(f'Ocurrió un error: {e}')
+    print(f'Ocurrio un error : {e}')
 finally:
     conexion.close()
+

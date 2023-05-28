@@ -1,23 +1,34 @@
-import psycopg2  # Librería para conectar con PostgreSQL
 
-dns = "dbname=test_bd user=postgres password=admin host=127.0.0.1 port=5432"
-conexion = psycopg2.connect(dns)
+import psycopg2
 
-# Insertar registro
+conexion = psycopg2.connect(
+    user='postgres',
+    password='admin',
+    host='127.0.0.1',
+    port='5432',
+    database='test_bd'
+)
+
+
+
 try:
     with conexion:
-        with conexion.cursor() as cursor:
-            sentencia = 'INSERT INTO persona (nombre, apellido, email) VALUES (%s, %s, %s)'
-            valores = (
-                ('Carlos','Lara','clara@mail.com'),
-                ('Marcos','Canto','mcanto@mail.com'),
-                ('Marcelo','Cuenca','cuencaM@mail.com')
-            )# Es una tupla de tuplas   
-            cursor.execute(sentencia, (valores))
-            # conexion.commit() # Se utiliza para guardar los cambios en la Base de Datos
+         with conexion.cursor() as cursor:
+
+            sentencia = 'insert into persona (nombre,apellido,email) values (%s,%s,%s)'
+            valores =(('carlos','lara','clara@mail.com'),
+            ('pedro','gomez','pgomez@mail.com'),
+            ( 'luis','diaz','ldiez@mail.com') # es un tupla de tuplas
+                      )
+           #clase 5 parte5
+
+            cursor.executemany(sentencia,valores)
             registros_insertados = cursor.rowcount
-            print(f'Los registros insertados son: {registros_insertados}')
+            print(f'los registros insertados son : {registros_insertados}')
+
+
 except Exception as e:
-    print(f'Ocurrió un error: {e}')
+    print(f'Ocurrio un error : {e}')
 finally:
     conexion.close()
+
