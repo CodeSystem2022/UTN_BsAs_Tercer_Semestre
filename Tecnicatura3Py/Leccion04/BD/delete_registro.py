@@ -1,19 +1,32 @@
-import psycopg2  # Librería para conectar con PostgreSQL
+import psycopg2
 
-dns = "dbname=test_bd user=postgres password=admin host=127.0.0.1 port=5432"
-conexion = psycopg2.connect(dns)
+conexion = psycopg2.connect(
+    user='postgres',
+    password='admin',
+    host='127.0.0.1',
+    port='5432',
+    database='test_bd'
+)
 
-# Insertar registro
+
+
+
 try:
     with conexion:
-        with conexion.cursor() as cursor:
-            sentencia = 'DELETE FROM persona WHERE id_persona=%s'
-            entrada = input("Digite el nùmero de regisro a eliminar")
-            valores = (entrada,) # Es una tupla de valores
-            cursor.execute(sentencia, valores) # De esta manera ejecutamos la sentencia
-            registros_eliminados = cursor.rowcount
-            print(f'Los registros actualizados son: {registros_eliminados}')
+         with conexion.cursor() as cursor:
+
+            sentencia = 'delete from persona where id_persona=%s'
+            valores = (7,)  # es un tupla
+
+            #clase 5 parte5
+
+            cursor.execute(sentencia, valores)
+            registros_borrados = cursor.rowcount
+            print(f'los registros borrados son : {registros_borrados}')
+
+
 except Exception as e:
-    print(f'Ocurrió un error: {e}')
+    print(f'Ocurrio un error : {e}')
 finally:
     conexion.close()
+
