@@ -38,7 +38,8 @@ class Empleado extends Persona{ //Clase hija
     this._departamento = departamento;
   }
 }
-
+/*
+// Código Alejandro
 let persona1 = new Persona('Martin', 'Perez');
 console.log(persona1.nombre);
 persona1.nombre = 'Juan Carlos';
@@ -57,3 +58,21 @@ console.log(persona2.apellido);
 let empleado1 = new Empleado('Maria', 'Gimenez', 'Sistemas');
 console.log(empleado1);
 console.log(empleado1.nombre);
+*/
+
+// Código Pia
+let persona1 = new Persona('Martin', 'Perez')
+console.log(persona1.nombre);
+persona1.nombre ='Juan Carlos';
+console.log(persona1.nombre);
+//console.log(persona1);
+
+let persona2= new Persona('Carlos,', 'Lara');
+console.log(persona2.nombre);
+persona2.nombre ='Maria Laura';
+console.log(persona2.nombre);
+//console.log(persona2);
+
+let empleado1 = new Empleado('Maria', 'Gimenez', 'Sistemas');
+console.log(empleado1)
+console.log(empleado1.nombre)
