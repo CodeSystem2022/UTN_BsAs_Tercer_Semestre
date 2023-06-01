@@ -20,6 +20,9 @@ class Persona{
         this._apellido = apellido;
     }
 
+    toString(){ //Regresa un String
+      return  this.nombreCompleto();
+    }
 
 }
 
@@ -42,3 +45,6 @@ console.log('Se crea persona4: ', persona4);
 // Probando setter de persona4
 persona4.nombre = 'Valeria';
 console.log('Probando getter de nombre de persona2: ', persona4.nombre);
+
+//Object.prototype.toString Esta es la manera de acceder a atributos y metodos de manera dinamica
+console.log(empleado1.toString());
