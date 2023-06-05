@@ -42,6 +42,10 @@ class Empleado extends Persona{ //Clase hija
   set departamento(departamento){
     this._departamento = departamento;
   }
+  //Sobreescritura de método
+  nombreCompleto() {
+    return super.nombreCompleto() + " - " + this._departamento;
+  }
 }
 /*
 // Código Alejandro
@@ -80,4 +84,5 @@ console.log(persona2.nombre);
 
 let empleado1 = new Empleado('Maria', 'Gimenez', 'Sistemas');
 console.log(empleado1)
-console.log(empleado1.nombreCompleto);
+console.log(empleado1.nombreCompleto());
+
