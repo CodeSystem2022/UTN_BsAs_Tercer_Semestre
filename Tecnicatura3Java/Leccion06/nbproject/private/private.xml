@@ -3,10 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Mi/Desktop/UTN_repo_personal/Tecnicatura3Java/Leccion06/Interfaces/src/test/TestInterfaces.java</file>
-            <file>file:/C:/Users/Mi/Desktop/UTN_repo_personal/Tecnicatura3Java/Leccion06/Interfaces/src/accesodatos/ImplementacionOracle.java</file>
-            <file>file:/C:/Users/Mi/Desktop/UTN_repo_personal/Tecnicatura3Java/Leccion06/Interfaces/src/accesodatos/ImplementacionMySql.java</file>
-            <file>file:/C:/Users/Mi/Desktop/UTN_repo_personal/Tecnicatura3Java/Leccion06/Interfaces/src/accesodatos/IAccesoDatos.java</file>
+            <file>file:/C:/Users/svega/Desktop/UTN_BsAs_Tercer_Semestre/Tecnicatura3Java/Leccion06/src/accesodatos/IAccesoDatos.java</file>
+            <file>file:/C:/Users/svega/Desktop/UTN_BsAs_Tercer_Semestre/Tecnicatura3Java/Leccion06/src/test/TestInterfaces.java</file>
         </group>
     </open-files>
 </project-private>
