@@ -3,6 +3,20 @@ import java.util.Scanner;
 public class CalculadoraUTN {
     public static void main(String[] args) {
 
+        /*  Issue #90 
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("******** Aplicación Calculadora ********");
+
+        // Definiciones de variables
+        System.out.print("Ingrese valor para el operando 1: ");
+        var operando1 = Integer.parseInt(entrada.nextLine());
+        System.out.print("Ingrese valor para el operando 2: ");
+        var operando2 = Integer.parseInt(entrada.nextLine());
+
+        var resultado = operando1 + operando2;
+        System.out.println("El resultado es: " + resultado);
+        */
+
         while(true){
 
             Scanner sc = new Scanner(System.in);
