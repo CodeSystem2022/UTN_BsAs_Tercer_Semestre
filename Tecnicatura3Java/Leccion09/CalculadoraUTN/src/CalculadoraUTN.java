@@ -1,74 +1,69 @@
 import java.util.Scanner;
 
 public class CalculadoraUTN {
-    public static void main(String[]args){
-        Scanner entrada= new Scanner(System.in);
-        while (true) { // Ciclo infinito
-
-
-
-            System.out.println("********** Aplicaciòn calcuadora **********");
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        while(true){ //Ciclo infinito
+            System.out.println("******* Aplicacion Calculadora *******");
             mostrarMenu();
-
-            try {
+            try{
                 var operacion = Integer.parseInt(entrada.nextLine());
-
-                if (operacion >= 1 && operacion <= 4) {
-
-                ejecutarOperacion(operacion,entrada);
-
-                }// Fin del if
+                if(operacion >= 1 && operacion <= 4){
+                    ejecutarOperacion(operacion, entrada);
+                } //Fin del if
                 else if (operacion == 5) {
                     System.out.println("Hasta pronto...");
-                    break;//Rompe el ciclo y sale
-                } else {
-                    System.out.println("Opcion erronea: " + operacion);
+                    break; //Rompe el cilo y sale
+                }
+                else {
+                    System.out.println("Opcion erronea: "+operacion);
                 }
                 //Imprimimos un salto de linea antes de repetir el menu
                 System.out.println();
-            }catch (Exception e) {//Fin try, comienzo del catch
-            System.out.println("Ocurrió un error: "+e.getMessage());
+            } catch (Exception e){ //Fin del try comienzo del catch
+                System.out.println("Ocurrio un error: "+e.getMessage());
                 System.out.println();
+            } //Fin catch
+        } //Fin while
+    } //Fin main
 
-        }//Fin catch
-            }//Fin while
-    }//Fin main
     private static void mostrarMenu(){
-        //Mostramos el menú
+        //Mostramos el menu
         System.out.println("""
-                    1.Suma
-                    2.Resta
-                    3.Multiplicación
-                    4.Division
-                    5.Salir
+                    1. Suma
+                    2. Resta
+                    3. Multiplicacion
+                    4. Division
+                    5. Salir
                     """);
-        System.out.println("Operación a realizar");
-    }//Fin método mostrarMenu
+        System.out.print("Operacion a realizar? ");
+    } //Fin metodo mostrar menu
 
-    private static void ejecutarOperacion(int operacion,Scanner entrada){
+    private static void ejecutarOperacion(int operacion, Scanner entrada){
         System.out.print("Digite el valor para el operando1: ");
         var operando1 = Double.parseDouble(entrada.nextLine());
         System.out.print("Digite el valor para el operando2: ");
         var operando2 = Double.parseDouble(entrada.nextLine());
         double resultado;
-        switch (operacion) {
-            case 1 -> {//Suma
+        switch(operacion){
+            case 1 -> { //Suma
                 resultado = operando1 + operando2;
                 System.out.println("Resultado de la suma: " + resultado);
             }
-            case 2 -> {//Resta
+            case 2 -> { //Resta
                 resultado = operando1 - operando2;
-                System.out.println("Resultado de la resta: " + resultado);
+                System.out.println("resultado de la resta: " + resultado);
             }
-            case 3 -> {//Multiplicación
+            case 3 -> { //Multiplicacion
                 resultado = operando1 * operando2;
-                System.out.println("Resultado de la Multiplicación: " + resultado);
+                System.out.println("resultado de la multiplicacion: " + resultado);
             }
-            case 4 -> {//Division
+            case 4 -> { //Division
                 resultado = operando1 / operando2;
-                System.out.println("Resultado de la Division: " + resultado);
+                System.out.println("resultado de la division: " + resultado);
             }
-            default -> System.out.println("Opcion erronea: " + operacion);
+            default -> System.out.println("Opcion erronea" +operacion);
         } //Fin switch
-    }//Fin metdo ejecutar operacion
-}//Fin clase
+    } //Fin metodo ejecutarOperacion
+
+} //Fin clase
